@@ -1,3 +1,10 @@
+// 2da pre entrega
+// Tienes que hacer un simulador que tenga los siguientes temas:
+
+// 1. Arreglos.
+// 2. Funciones de orden superior.
+// 3. Objetos.
+
 alert(`Bienvenido/a a cineando
 A continuaciôn tendrá 5 opciones de peliculas para elegir, puede elegir su pelicula marcando el numero correspondiente a la misma.`)
 
@@ -35,5 +42,25 @@ while(peliculas){
 
 peliculaElegida();
 
-// Hola Profe/tutor, aqui hay un par de cositas que no han dado en clases y que he buscado por mi cuenta,
-//como los metodos para conseguir el codigo ramdom etc. Espero no sea ningun problema. :D
+let comboElegido = 0
+
+const menu = {
+    combo1 : 4,
+    combo2 : 6,
+    combo3 : 7,
+    combo4 : 2,
+}
+
+let orden = parseInt(prompt(`que deseas ordenar?`))
+
+function calculoComida (orden){
+    if(orden === 1){
+        return menu['combo1']
+    }
+}
+
+function cuentaFinal (callback){
+    return `el total de tu cuenta es de ${callback()}`
+}
+
+alert(cuentaFinal(() => calculoComida(orden)));

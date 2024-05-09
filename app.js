@@ -51,11 +51,26 @@ const menu = {
     combo4 : 2,
 }
 
-let orden = parseInt(prompt(`que deseas ordenar?`))
+let orden = parseInt(prompt(`Inserta el numero de lo que deseas ordenar:
+1- Palomita grande + 2 sodas reg
+2- Palomitas pequeñas + soda reg + hot dog
+3- Palomitas pequeñas + 2 sodas gdes + nachos
+4- Palomitas pequeñas + soda reg + snicker + hot dog`))
+
+while (orden>4 || orden<1 || orden=== Number){
+ alert ("Por favor, inserta un numero del 1-4")
+ orden()
+}
 
 function calculoComida (orden){
     if(orden === 1){
         return menu['combo1']
+    }else if(orden === 2){
+        return menu['combo2']
+    }else if(orden === 3){
+        return menu['combo3']
+    }else if(orden === 4){
+        return menu['combo4']
     }
 }
 

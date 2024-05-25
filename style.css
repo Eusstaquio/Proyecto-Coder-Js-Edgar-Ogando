@@ -1,6 +1,36 @@
 
 body{
     background-color: rgb(201, 201, 201);
+    font-family: system-ui;
+}
+
+.navBar{
+    display: flex;
+    background-color: bisque;
+    justify-content: space-between;
+    padding: .5rem 2rem;
+
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 11.5pt;
+    padding: .5rem 0;
+}
+
+.button:visited{
+    color: black;
+}
+
+.button img {
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 .5rem
 }
 
 .contPeliculas{
@@ -10,12 +40,9 @@ body{
     max-width: 1600px;
     margin: auto
 }
+
 .tittle{
-    margin: auto;
     text-align: center;
-    background-color: bisque;
-    padding: 1.5rem;
-    width: 100%;
 }
 .peliculas{
     margin: 2rem 0;
@@ -46,7 +73,7 @@ h4{
     margin-top: 1.5rem;
 }
 
-.cta{
+.botones{
     width: 240px;
     padding: .5rem 0;
     margin-top: .5rem;
@@ -57,7 +84,7 @@ h4{
     border: none;
     cursor: pointer;
 }
-.cta:hover{
+.botones:hover{
     background-color: rgb(48, 48, 48);
 }
 .contCombos{

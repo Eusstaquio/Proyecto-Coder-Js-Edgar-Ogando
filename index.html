@@ -15,55 +15,70 @@ y pasar a recoger sus palomitas y entrar sin perder tiempo a la sala -->
 
 <!DOCTYPE html>
 <html lang="en"> 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cineando</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <main>
+
+        <section class="navBar">
+            <a class="logo button" href="../index.html">che imaginá que hay un logo aquí</a>
+
+            <a class="button" href="../pages/shopping-cart.html">
+                <span>Shopping Cart</span>
+                <img src="https://www.svgrepo.com/show/43071/shopping-bag.svg" alt="shopping-bag">
+            </a>
+
+        </section>
+        
         <h1 class="tittle">Peliculas en Cartelera</h1>
+
         <div class="contPeliculas">
+
             <div class="peliculas">
-                <img src="./resources/pelicula1.jpeg" alt="">
-                <h4>Capitan Avispa</h4>
+                <img src="../assets/pelicula1.jpeg" alt="">
+                <h4 class="nombrePelicula" >Capitan Avispa</h4>
                 <button class="horas"> 6:00 P.M</button>
                 <button class="horas"> 8:00 P.M</button>
                 <button class="horas"> 10:00 P.M</button>
-                <button class="cta">Comprar Taquillas</button>
+                <button class="cta pelicula-id botones" data-pelicula-id="1" >Comprar Taquillas</button>
             </div>
             <div class="peliculas">
-                <img src="./resources/pelicula2.jpg" alt="">
-                <h4>Arthur</h4>
+                <img src="../assets/pelicula2.jpg" alt="">
+                <h4 class="nombrePelicula" >Arthur</h4>
                 <button class="horas"> 6:00 P.M</button>
                 <button class="horas"> 8:00 P.M</button>
                 <button class="horas"> 10:00 P.M</button>
-                <button class="cta">Comprar Taquillas</button>
+                <button class="cta pelicula-id botones" data-pelicula-id="2">Comprar Taquillas</button>
             </div>
             <div class="peliculas">
-                <img src="./resources/pelicula3.webp" alt="">
-                <h4>Dune parte 2</h4>
+                <img src="../assets/pelicula3.webp" alt="">
+                <h4 class="nombrePelicula" >Dune parte 2</h4>
                 <button class="horas"> 6:00 P.M</button>
                 <button class="horas"> 8:00 P.M</button>
                 <button class="horas"> 10:00 P.M</button>
-                <button class="cta">Comprar Taquillas</button>
+                <button class="cta pelicula-id botones" data-pelicula-id="3">Comprar Taquillas</button>
             </div>
             <div class="peliculas">
-                <img src="./resources/pelicula4.jpg" alt="">
-                <h4>Godzilla y Kong</h4>
+                <img src="../assets/pelicula4.jpg" alt="">
+                <h4 class="nombrePelicula" >Godzilla y Kong</h4>
                 <button class="horas"> 6:00 P.M</button>
                 <button class="horas"> 8:00 P.M</button>
                 <button class="horas"> 10:00 P.M</button>
-                <button class="cta">Comprar Taquillas</button>
+                <button class="cta pelicula-id botones" data-pelicula-id="4">Comprar Taquillas</button>
             </div>
             <div class="peliculas">
-                <img src="./resources/pelicula5.jpg" alt="">
-                <h4>Kung Fu Panda 4</h4>
+                <img src="../assets/pelicula5.jpg" alt="">
+                <h4 class="nombrePelicula" >Kung Fu Panda 4</h4>
                 <button class="horas"> 6:00 P.M</button>
                 <button class="horas"> 8:00 P.M</button>
                 <button class="horas"> 10:00 P.M</button>
-                <button class="cta">Comprar Taquillas</button>
+                <button class="cta pelicula-id botones" data-pelicula-id="5">Comprar Taquillas</button>
             </div>
         </div>
     </main>
@@ -72,31 +87,33 @@ y pasar a recoger sus palomitas y entrar sin perder tiempo a la sala -->
     
     <section class="contCombos">
         <div class="combos" id="combo1">
-            <img src="./resources/combo1.jpeg" alt="">
+            <img src="../assets/combo1.jpeg" alt="">
             <h4>combo 1</h4>
             <p>Palomita grande + 2 sodas reg</p>
         </div>
 
         <div class="combos" id="combo2">
-            <img src="./resources/combo2.webp" alt="">
+            <img src="../assets/combo2.webp" alt="">
             <h4>combo 1</h4>
             <p>Palomitas pequeñas + soda reg + hot dog</p>
         </div>
 
         <div class="combos" id="combo3">
-            <img src="./resources/combo3.webp" alt="">
+            <img src="../assets/combo3.webp" alt="">
             <h4>combo 1</h4>
             <p>Palomitas pequeñas + 2 sodas gdes + nachos</p>
         </div>
 
         <div class="combos" id="combo4">
-            <img src="./resources/combo4.webp" alt="">
+            <img src="../assets/combo4.webp" alt="">
             <h4>combo 1</h4>
-            <p>Palomitas pequeñas + soda reg + snicker + hot dogr</p>
+            <p>Palomitas pequeñas + soda reg + snicker + hot dog</p>
         </div>
 
     </section>
-    <!-- <script src="app.js" ></script> -->
+    <script type="module" src="./src/app.js" ></script>
+    <script type="module" src="./src/shopping-cart.js"></script>
+    <script type="module" src="./src/food-menu.js"></script>
 </body>
 </html>
 

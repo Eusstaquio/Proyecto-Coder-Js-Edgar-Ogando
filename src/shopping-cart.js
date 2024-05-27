@@ -82,7 +82,8 @@ function renderPelicula (pelicula){
     </select>
 
     <label for="cantidad">Cantidad de taquillas:</label>
-    <input type="number" id="cantidadTaquillas" name="cantidad" min="1" max="10">
+    <input type="number" id="inputTaquillas" name="cantidad" min="1" max="10">
+    <p class="totalPagar">Total a pagar: $ </p>
     <button  class="botones comprar" type="submit">Comprar</button>
     </form>
     `
@@ -90,23 +91,30 @@ function renderPelicula (pelicula){
 
 
 function funcionComprar (pelicula){
+
     const btnComprar = document.querySelector('.comprar');
-    const numTaquillas = document.getElementById('cantidadTaquillas')
+    const inputTaquillas = document.getElementById('inputTaquillas')
     const contenedorTaquillas = document.getElementById('contenedorTaquillas')
+    const totalPagar = document.querySelector('.totalPagar')
+
+    inputTaquillas.addEventListener('input', () =>{
+        const cantidad = parseInt(inputTaquillas.value) || 0;
+        const total = cantidad * pelicula.precio;
+        totalPagar.textContent = `Total a pagar: $${total}`;
+    })
     
     btnComprar.addEventListener('click', (event)=>{
         event.preventDefault()
-        const cantidad = parseInt(numTaquillas.value, 10);
+        const cantidad = parseInt(inputTaquillas.value);
         const total = cantidad * pelicula.precio;
         
-
-
         if (cantidad > 0) {
-            contenedorTaquillas.innerHTML = `<p>Su compra ha sido realizada de manera exitosa
-            el total a pagar es de: $${total}</p>`;
+            contenedorTaquillas.innerHTML = `<p>Su compra ha sido realizada de manera exitosa.
+            Puedes recoger tus taquillas con este codigo: ${codigoTaquillas()}</p>`
         } else {
             contenedorTaquillas.innerHTML = `<p>Ingrese una cantidad válida.</p>`;
         }
+
     })
 }
 
@@ -114,7 +122,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     const peliculaId = JSON.parse(localStorage.getItem('peliculaSeleccionada'));
     const pelicula = peliculas.find(e => e.id == peliculaId.id);
-    
+
     if(pelicula) {
         renderPelicula(pelicula)
         setTimeout(() =>{
@@ -126,13 +134,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
 })
 
 
-//Me quede buscando la manera de llamar a la funcion cuando el contenido haya cargado
-//Pero recuerda que tienes que hacer que ese evento se dispare al clickar el cta por ende ya habra 
-//cargado el contenido, sino no habria como presionar el boton.
-
-
-
-
-    // function codigoTaquillas (){
-    //     return Math.floor(1000 + Math.random() * 9000)
-    // }
+function codigoTaquillas (){
+    return Math.floor(1000 + Math.random() * 9000)
+}

@@ -8,22 +8,23 @@
 // agregar local storage para guardar la orden
 // Mi tercera pre entrega debe tener: DOM, eventos (obligartorio sustituir los prompts), localStorage y JSON
 
-import { peliculas } from "./shopping-cart.js";
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.cta');
+    fetch('../database.json')
+        .then(response => response.json())
+        .then(peliculas =>{
+            const buttons = document.querySelectorAll('.cta');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const peliculaId = parseInt(button.dataset.peliculaId);
-            const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id === peliculaId);
-            
-            if (peliculaSeleccionada) {
-                localStorage.setItem('peliculaSeleccionada', JSON.stringify(peliculaSeleccionada));
-                window.location.href = './pages/shopping-cart.html';
-            }
-        });
-    });
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const peliculaId = parseInt(button.dataset.peliculaId);
+                    const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id === peliculaId);
+                    
+                    if (peliculaSeleccionada) {
+                        localStorage.setItem('peliculaSeleccionada', JSON.stringify(peliculaSeleccionada));
+                        window.location.href = './pages/shopping-cart.html';
+                    }
+                });
+            });
+        })
 });
 

@@ -1,62 +1,4 @@
 
-export const peliculas = [
-    {
-    id: 1,
-    nombre: 'Capitan Avispa',
-    image: "pelicula1.jpeg",
-    sinopsis: "", 
-    duracion: "1 hr y 27 min",
-    genero: "Comedia Infantil, Aventura",
-    sala: 1,
-    horarios: ["6:00 PM", "8:00 PM", "10:00 PM"],
-    precio: 6,
-    },
-    {
-    id: 2,
-    nombre: 'Arthur',
-    image: "pelicula2.jpg",
-    sinopsis: "", 
-    duracion: "1 hr 44 min",
-    genero: "Drama, Aventura",
-    sala: 2,
-    horarios: ["6:00 PM", "8:00 PM", "10:00 PM"],
-    precio: 6,
-    },
-    {
-    id: 3,
-    nombre: 'IF',
-    image: "pelicula3.webp",
-    sinopsis: "", 
-    duracion: "1 hora y 27 mins",
-    genero: "Familiar, Comedia, Fantasia",
-    sala: 3,
-    horarios: ["6:00 PM", "8:00 PM", "10:00 PM"],
-    precio: 6,
-    },
-    {
-    id: 4,
-    nombre: 'Deadpool & Wolverine',
-    image: "pelicula4.jpg",
-    sinopsis: "", 
-    duracion: "2 hr 12 min",
-    genero: "Accion, Comedia, Aventura",
-    sala: 4,
-    horarios: ["6:00 PM", "8:00 PM", "10:00 PM"],
-    precio: 6,
-    },
-    {
-    id: 5,
-    nombre: 'The Strangers: Chapter 1',
-    image: "pelicula5.jpg",
-    sinopsis: "", 
-    duracion: "1 hr 31 min",
-    genero: "Horror, Thriller",
-    sala: 5,
-    horarios: ["6:00 PM", "8:00 PM", "10:00 PM"],
-    precio: 6,
-    }
-]
-
 function renderPelicula (pelicula){
 
     const contenedorPelicula = document.getElementById("contenedorPelicula");
@@ -121,16 +63,28 @@ function funcionComprar (pelicula){
 document.addEventListener('DOMContentLoaded', ()=> {
 
     const peliculaId = JSON.parse(localStorage.getItem('peliculaSeleccionada'));
-    const pelicula = peliculas.find(e => e.id == peliculaId.id);
 
-    if(pelicula) {
-        renderPelicula(pelicula)
-        setTimeout(() =>{
-            funcionComprar(pelicula)
-        }, 0)
-    } else {
-        document.getElementById('contenedorPelicula').innerHTML = '<p>Película no encontrada.</p>';
-    }
+    fetch('../database.json')
+        .then(response => response.json())
+        .then(peliculas => {
+            console.log(peliculas)
+            
+            const pelicula = peliculas.find(e => e.id == peliculaId.id);
+            console.log(pelicula)
+
+            if(pelicula) {
+                renderPelicula(pelicula)
+                setTimeout(() =>{
+                    funcionComprar(pelicula)
+                }, 0)
+            } else {
+                document.getElementById('contenedorPelicula').innerHTML = '<p>Película no encontrada.</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Error al obtener las películas:', error);
+            document.getElementById('contenedorPelicula').innerHTML = '<p>Error al cargar las películas.</p>';
+        });
 })
 
 

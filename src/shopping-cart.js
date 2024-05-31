@@ -67,10 +67,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
     fetch('../database.json')
         .then(response => response.json())
         .then(peliculas => {
-            console.log(peliculas)
             
             const pelicula = peliculas.find(e => e.id == peliculaId.id);
-            console.log(pelicula)
 
             if(pelicula) {
                 renderPelicula(pelicula)

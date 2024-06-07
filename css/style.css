@@ -1,17 +1,20 @@
 @charset "UTF-8";
-main {
-  background-color: #394648;
-  font-family: system-ui;
-}
-
-.navBar {
+.navbar {
   display: flex;
   background-color: #1F4735;
   justify-content: space-between;
   padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(31, 71, 53);
+  transition: background-color 0.3s ease;
 }
-
-.button {
+.navbar .logo {
+  width: 110px;
+  height: auto;
+}
+.navbar .navbar_Button {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -20,31 +23,38 @@ main {
   border: none;
   font-size: 11.5pt;
   padding: 0.5rem 0;
+  color: rgb(255, 255, 255);
+}
+.navbar .navbar_Button .navbar_Button:visited {
+  color: rgb(255, 255, 255);
+}
+.navbar .navbar_Button img {
+  width: 22px;
+  height: 22px;
+  margin: 0 0 0 0.2rem;
+  color: white;
 }
 
-.button:visited {
-  color: black;
+.scrolled {
+  background-color: rgba(31, 71, 53, 0.6);
 }
 
-.button img {
-  width: 20px;
-  height: 20px;
-  margin: 0 0 0 0.5rem;
+body {
+  margin: 0;
+  background-color: #394648;
+  font-family: system-ui;
 }
-
-.contPeliculas {
+body main .tittle {
+  text-align: center;
+}
+body main .contPeliculas {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   max-width: 1600px;
   margin: auto;
 }
-
-.tittle {
-  text-align: center;
-}
-
-.peliculas {
+body main .peliculas {
   margin: 2rem 0;
   height: 480px;
   width: 280px;
@@ -54,26 +64,22 @@ main {
   text-align: center;
   background-color: white;
 }
-
-img {
+body main .peliculas img {
   width: 240px;
   height: 320px; /* o el tamaño que desees */
   object-fit: cover;
   border-radius: 0.5rem;
   margin-top: 1rem;
 }
-
-h4 {
+body main .peliculas h4 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 0.5rem 0;
   padding: 0 0.5rem;
 }
-
-.horas {
+body main .peliculas .horas {
   margin-top: 1.5rem;
 }
-
-.botones {
+body main .peliculas .botones {
   width: 240px;
   padding: 0.5rem 0;
   margin-top: 0.5rem;
@@ -84,27 +90,8 @@ h4 {
   border: none;
   cursor: pointer;
 }
-
-.botones:hover {
+body main .peliculas .botones:hover {
   background-color: rgb(48, 48, 48);
-}
-
-.contCombos {
-  margin: auto;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.combos {
-  margin: 2rem 0;
-  height: 350px;
-  background-color: white;
-  width: 240px;
-  border: solid 1.5px;
-  border-radius: 0.5rem;
-  display: inline-block;
-  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

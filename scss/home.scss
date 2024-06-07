@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    background-color: #394648;
+    font-family: system-ui;
+    
+    main{
+        .tittle{
+        text-align: center;
+        }
+
+        .contPeliculas{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 1600px;
+        margin: auto
+
+        }
+
+        .peliculas{
+            margin: 2rem 0;
+            height: 480px;
+            width: 280px;
+            border: solid 1.5px;
+            border-radius: .5rem;
+            display: inline-block;
+            text-align: center;
+            background-color: white;
+            
+            img{
+                width: 240px;
+                height: 320px; /* o el tamaño que desees */
+                object-fit: cover;
+                border-radius: .5rem;
+                margin-top: 1rem;
+            }
+
+            h4{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin: .5rem 0;
+                padding: 0 .5rem;
+            }
+            
+            .horas{
+                margin-top: 1.5rem;
+            }
+            
+            .botones{
+                width: 240px;
+                padding: .5rem 0;
+                margin-top: .5rem;
+                font-size: 13pt;
+                border-radius: .5rem;
+                color: white;
+                background-color: black;
+                border: none;
+                cursor: pointer;
+            }
+            .botones:hover{
+                background-color: rgb(48, 48, 48);
+            }
+        }
+    }
+}

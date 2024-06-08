@@ -1,11 +1,11 @@
 [
     {
        "id":1,
-       "nombre":"Capitan Avispa",
-       "image":"pelicula1.jpeg",
-       "sinopsis":"Avispatrópolis y el Reino de la Miel viven en armonía en el panal protegidos por el Héroe de ambos, el Capitán Avispa. Pero el malvado Avispón Jaques Poison y sus secuaces planean acabar con esa paz y apoderarse de ambas colonias.​​Está en las manos del Capitán Avispa defender a los suyos a toda costa, como siempre, con nobleza, justicia e inocencia, resumido en su grito de guerra: “Fuerte y Valiente, nunca Miente!”… un enunciado, que será puesto a prueba por sus más grandes enemigos.",
-       "duracion":"1 hr y 27 min",
-       "genero":"Comedia Infantil, Aventura",
+       "nombre":"Bad Boys: Ride or Die",
+       "image":"pelicula_badboys.png",
+       "sinopsis":"Los policías más famosos del mundo regresan con su icónica mezcla de acción al límite y comedia escandalosa, pero esta vez con un giro inesperado: ¡Los mejores de Miami se dan a la fuga! Cuarta entrega de la saga 'Dos policías rebeldes'.",
+       "duracion":"1 hr y 50 min",
+       "genero":"Acción / Aventura / Comedia",
        "sala":1,
        "horarios":[
           "6:00 PM",
@@ -16,11 +16,11 @@
     },
     {
        "id":2,
-       "nombre":"Arthur",
-       "image":"pelicula2.jpg",
-       "sinopsis":"Mikael Lindnord, el capitán del equipo sueco de atletismo de aventura, tuvo un extraño encuentro durante la carrera de 400 millas en la jungla ecuatoriana, cuando en su camino se cruzó un perro callejero. Tras el momento en el que Lindnord le alimentó, el perro le siguió por el resto del recorrido, haciendo incluso los tramos más complicados del planeta. Tras finalizar la carrera, Lindnord decidió adoptar la perro y llamarlo Arthur y llevarlo con él a Suecia.",
-       "duracion":"1 hr 44 min",
-       "genero":"Drama, Aventura",
+       "nombre":"Furiosa: A Mad Max Saga",
+       "image":"pelicula_furiosa.png",
+       "sinopsis":"Mientras el mundo se derrumba, la joven Furiosa es secuestrada del Lugar Verde de Muchas Madres y cae en manos de una Horda de Motociclistas liderada por el Señor de la Guerra Dementus. Recorriendo la tierra baldía llega a la Ciudadela, presidida por Inmortan Joe. Mientras los dos tiranos luchan por el dominio de la zona, Furiosa deberá sobrevivir a muchas pruebas buscando volver a casa",
+       "duracion":"2 hr 28 min",
+       "genero":"Acción / Aventura / Ciencia Ficción",
        "sala":2,
        "horarios":[
           "6:00 PM",
@@ -32,10 +32,10 @@
     {
        "id":3,
        "nombre":"IF",
-       "image":"pelicula3.webp",
+       "image":"pelicula_if.png",
        "sinopsis":"Del guionista y director John Krasinski, “Amigos imaginarios” trata sobre una niña que descubre que puede ver a los amigos imaginarios de todo el mundo y lo que hace con ese superpoder mientras se embarca en una aventura mágica para reconectar a los amigos imaginarios olvidados con sus hijos. “Amigos Imaginarios” está protagonizada por Ryan Reynolds, John Krasinski, Cailey Fleming, Fiona Shaw y las voces de Phoebe Waller-Bridge, Louis Gossett Jr. y Steve Carell, entre muchos otros, como los personajes maravillosamente únicos que reflejan el increíble poder de la imaginación de un niño.",
        "duracion":"1 hora y 27 mins",
-       "genero":"Familiar, Comedia, Fantasia",
+       "genero":"Comedia / Drama / Familia",
        "sala":3,
        "horarios":[
           "6:00 PM",
@@ -46,11 +46,11 @@
     },
     {
        "id":4,
-       "nombre":"Deadpool & Wolverine",
-       "image":"pelicula4.jpg",
-       "sinopsis":"Wolverine se recupera de sus heridas cuando se cruza con el bocazas, Deadpool, que ha viajado en el tiempo para curarlo con la esperanza de hacerse amigos y formar un equipo para acabar con un enemigo común.",
-       "duracion":"2 hr 12 min",
-       "genero":"Accion, Comedia, Aventura",
+       "nombre":"Kingdom of the Planet of the Apes",
+       "image":"pelicula_planetsofapes.png",
+       "sinopsis":"Casi 300 años después de los acontecimientos de La guerra por el planeta de los simios (2017), civilizaciones de simios han surgido del oasis al que César condujo a sus compañeros simios, mientras que los humanos han retrocedido a un estado salvaje y primitivo. Cuando el rey simio Proximus Caesar, armado con armas forjadas a partir de tecnologías humanas perdidas, pervierte las enseñanzas de César para esclavizar a otros clanes, la cazadora de chimpancés Noa se embarca en un viaje desgarrador junto a una niña humana llamada Mae para determinar el futuro de los simios y los humanos por igual.",
+       "duracion":"2 hr 25 min",
+       "genero":"Acción / Ciencia Ficción",
        "sala":4,
        "horarios":[
           "6:00 PM",
@@ -61,11 +61,56 @@
     },
     {
        "id":5,
-       "nombre":"The Strangers: Chapter 1",
-       "image":"pelicula5.jpg",
-       "sinopsis":"El conocido director Renny Harlin (riesgo total, Duro de mater 2, Exorcista; El comienzo) nos entrega una nueva trilogía de terror.En LOS EXTRAÑOS: CAPÍTULO 1, Maya (Madelaine Petsch en Riverdale) es una joven mujer que inicia una nueva vida con su prometido.Durante un viaje en auto deben de hospedarse en una cabaña en renta en lo profundo de un bosque; es ahí donde se vuelven presa de unos extraños enmascarados que los atacan sin advertencia y sin razón.Lo que parecería una lucha por sobrevivir los llevará a conocer su valor y su astucia.",
-       "duracion":"1 hr 31 min",
-       "genero":"Horror, Thriller",
+       "nombre":"Challengers",
+       "image":"pelicula_challengers.png",
+       "sinopsis":"Ambientada en el competitivo mundo del tenis profesional, en el que la jugadora convertida en entrenadora Tashi (Zendaya) ha transformado a su marido Art (Faist) en un campeón de Grand Slam. Tras una racha de derrotas, Tashi lo inscribe en un evento 'Challenger' -el nivel más bajo de los torneos profesionales- donde debe enfrentarse a Patrick (O'Connor), el antiguo novio de Tashi y su antiguo mejor amigo.",
+       "duracion":"1 hr 41 min",
+       "genero":"Animación / Aventura / Comedia",
+       "sala":5,
+       "horarios":[
+          "6:00 PM",
+          "8:00 PM",
+          "10:00 PM"
+       ],
+       "precio":6
+    },
+    {
+       "id":6,
+       "nombre":"The Garfield Movie",
+       "image":"pelicula_garfield.png",
+       "sinopsis":"Tras una inesperada reunión con su largamente perdido padre, el gato callejero Vic, Garfield y su amigo canino Odie se ven forzados a abandonar sus perfectas y consentidas vidas al unirse a Vic en un hilarante y muy arriesgado atraco.",
+       "duracion":"1 hr 41 min",
+       "genero":"Animación / Aventura / Comedia",
+       "sala":5,
+       "horarios":[
+          "6:00 PM",
+          "8:00 PM",
+          "10:00 PM"
+       ],
+       "precio":6
+    },
+    {
+       "id":7,
+       "nombre":"Dune 2",
+       "image":"pelicula_dune2.png",
+       "sinopsis":"Paul Atreides se une a Chani y a los Fremen mientras busca venganza contra los conspiradores que destruyeron a su familia. Enfrentándose a una elección entre el amor de su vida y el destino del universo, debe evitar un futuro terrible.",
+       "duracion":"2 hr 46 min",
+       "genero":"Ciencia ficción/Aventura",
+       "sala":5,
+       "horarios":[
+          "6:00 PM",
+          "8:00 PM",
+          "10:00 PM"
+       ],
+       "precio":6
+    },
+    {
+       "id":8,
+       "nombre":"Deadpool & Wolverine",
+       "image":"pelicula_wolverinedeadpool.png",
+       "sinopsis":"Tercera entrega de la saga Deadpool, ahora integrada en el Universo Cinematográfico de Marvel (MCU) pero manteniendo su enfoque para adultos, con calificación R. En septiembre de 2022 se confirmó la aparición de Hugh Jackman como Lobezno, por primera vez desde Logan.",
+       "duracion":"1 hr 41 min",
+       "genero":"Acción / Comedia / Ciencia Ficción",
        "sala":5,
        "horarios":[
           "6:00 PM",

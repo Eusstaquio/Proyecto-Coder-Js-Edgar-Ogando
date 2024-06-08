@@ -1,20 +1,22 @@
-@charset "UTF-8";
 .navbar {
-  display: flex;
-  background-color: #1F4735;
-  justify-content: space-between;
-  padding: 0.5rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: rgb(31, 71, 53);
-  transition: background-color 0.3s ease;
 }
-.navbar .logo {
+.navbar .navbar_itemContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+  max-width: 1535px;
+  margin: auto;
+}
+.navbar .navbar_itemContainer .logo {
   width: 110px;
   height: auto;
 }
-.navbar .navbar_Button {
+.navbar .navbar_itemContainer .navbar_Button {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -25,10 +27,10 @@
   padding: 0.5rem 0;
   color: rgb(255, 255, 255);
 }
-.navbar .navbar_Button .navbar_Button:visited {
+.navbar .navbar_itemContainer .navbar_Button .navbar_Button:visited {
   color: rgb(255, 255, 255);
 }
-.navbar .navbar_Button img {
+.navbar .navbar_itemContainer .navbar_Button img {
   width: 22px;
   height: 22px;
   margin: 0 0 0 0.2rem;
@@ -44,42 +46,57 @@ body {
   background-color: #394648;
   font-family: system-ui;
 }
-body main .tittle {
-  text-align: center;
+
+.carousel {
+  height: 650px;
+  width: 1535px;
+  margin: auto;
 }
-body main .contPeliculas {
+.carousel img {
+  height: 650px;
+}
+
+.seccionPeliculas .tittle {
+  text-align: center;
+  margin: 3rem 0;
+}
+.seccionPeliculas .contPeliculas {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  max-width: 1600px;
+  max-width: 1535px;
   margin: auto;
 }
-body main .peliculas {
-  margin: 2rem 0;
-  height: 480px;
-  width: 280px;
-  border: solid 1.5px;
-  border-radius: 0.5rem;
+.seccionPeliculas .cardPelicula {
+  margin: 0 0 2rem 0;
+  width: 322px;
+  height: 600px;
+  border: none;
+  border-radius: 0.7rem;
   display: inline-block;
   text-align: center;
   background-color: white;
 }
-body main .peliculas img {
-  width: 240px;
-  height: 320px; /* o el tamaño que desees */
+.seccionPeliculas .cardPelicula img {
+  width: 322px;
+  height: 476px;
   object-fit: cover;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
+  border-radius: 0.6rem 0.6rem 0 0;
 }
-body main .peliculas h4 {
+.seccionPeliculas .cardPelicula .nombrePelicula {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 0.5rem 0;
   padding: 0 0.5rem;
+  font-size: 15pt;
 }
-body main .peliculas .horas {
+.seccionPeliculas .cardPelicula .generosPelicula {
+  font-size: 10pt;
+  margin: 0;
+}
+.seccionPeliculas .cardPelicula .horas {
   margin-top: 1.5rem;
 }
-body main .peliculas .botones {
+.seccionPeliculas .cardPelicula .botones {
   width: 240px;
   padding: 0.5rem 0;
   margin-top: 0.5rem;
@@ -90,7 +107,7 @@ body main .peliculas .botones {
   border: none;
   cursor: pointer;
 }
-body main .peliculas .botones:hover {
+.seccionPeliculas .cardPelicula .botones:hover {
   background-color: rgb(48, 48, 48);
 }
 

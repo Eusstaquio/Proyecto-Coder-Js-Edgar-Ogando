@@ -8,7 +8,7 @@ document.addEventListener('scroll', ()=>{
     }
 } )
 
-// me dio mucha pereza editar los cards en html, ademas iba a ser muchisimo codigo,
+// Noté que iba a ser muchisimo codigo crear los cards en html
 // asi que me hice una funcion para crear las cards de las peliculas, porfa digame si esto es buena practica o no.
 fetch('../database.json')
     .then(response => response.json())
@@ -28,40 +28,44 @@ function crearCardPelicula(pelicula){
 
     const contPeliculas = document.querySelector(".contPeliculas");
     const card = document.createElement('div');
-
     card.classList.add('cardPelicula');
+
+    if (!contPeliculas) {
+        console.error('El contenedor de películas no se encontró en el DOM.');
+        return;
+    }
 
     card.innerHTML =`
     <div class="cardPelicula">
         <img src="./assets/${pelicula.image}" alt="imagen de ${pelicula.nombre}">
         <h4 class="nombrePelicula">${pelicula.nombre}</h4>
         <h5 class="generosPelicula">${pelicula.genero}</h5>
-        <button class="cta pelicula-id botones" data-pelicula-id="1" >Comprar Taquillas</button>
+        <button class="cta pelicula-id botones" data-pelicula-id="${pelicula.id}" >Comprar Taquillas</button>
     </div>
     `
     contPeliculas.appendChild(card)
 }
 
 //Aqui utilizo el local storage (lo guardo y luego lo saco en la pagina "shopping_cart.js")
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('../database.json')
-        .then(response => response.json())
-        .then(peliculas =>{
-            const buttons = document.querySelectorAll('.cta');
 
-            buttons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const peliculaId = parseInt(button.dataset.peliculaId);
-                    const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id === peliculaId);
-                    
-                    if (peliculaSeleccionada) {
-                        localStorage.setItem('peliculaSeleccionada', JSON.stringify(peliculaSeleccionada));
-                        window.location.href = './pages/shopping-cart.html';
-                    }
-                });
+fetch('../database.json')
+    .then(response => response.json())
+    .then(peliculas =>{
+        const buttons = document.querySelectorAll('.cta');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const peliculaId = parseInt(button.dataset.peliculaId);
+                const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id === peliculaId);
+                
+                if (peliculaSeleccionada) {
+                    localStorage.setItem('peliculaSeleccionada', JSON.stringify(peliculaSeleccionada));
+                    window.location.href = './pages/shopping-cart.html';
+                }
             });
-        })
-});
+        });
+    })
+
 
 
 
